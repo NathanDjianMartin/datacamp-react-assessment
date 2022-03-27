@@ -74,7 +74,7 @@ class BreakingBad extends React.Component {
     let i = 0;
     let episodes = this.state.episodes.map((episode) => {
       i += 1
-      return <li key={i}>{episode}</li>
+      return <li key={i} className='episode'>{episode}</li>
     });
 
     return (
