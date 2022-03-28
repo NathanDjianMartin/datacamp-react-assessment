@@ -21,7 +21,7 @@ class RobotComponent extends React.Component {
         <h2>Robot simulation</h2>
         <form onSubmit={this.handleSubmit}>
           <label>
-            Robot instructions
+            Robot instructions (e.g. 0 0 NORTH AALA)
             <input type='text' className='textfield' name='characters' onChange={this.handleChange} />
           </label>
         </form>

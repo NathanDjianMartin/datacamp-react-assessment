@@ -58,6 +58,7 @@ class BreakingBadComponent extends React.Component {
             <div id='breakingbad' className='component'>
                 <h2>Breaking Bad episodes</h2>
                 <p>Search Breakind Bad episodes in which one or multiple characters appear together</p>
+                <p>To search for multiple characters, separate them by a coma.</p>
                 <form onSubmit={this.handleSubmit}>
                     <label>
                         Character(s) name
