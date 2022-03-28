@@ -12,10 +12,13 @@ class BreakingBadComponent extends React.Component {
     }
 
     /**
+     * Formats a character's name by triming it and capitalizing it.
+     * For example "wALTer WHITE" will return "Walter White"
      * 
      * @param {string} characterName 
      */
     format(characterName) {
+        characterName = characterName.trim();
         return characterName.split(' ')
             .map((word) => {
                 let result = word;
