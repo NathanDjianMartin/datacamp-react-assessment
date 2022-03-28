@@ -20,7 +20,7 @@ class BreakingBadComponent extends React.Component {
             .map((word) => {
                 let result = word;
                 result = result.trim();
-                result = result[0] + result.slice(1).toLowerCase();
+                result = result[0].toUpperCase() + result.slice(1).toLowerCase();
                 return result;
             })
             .join(' ');
