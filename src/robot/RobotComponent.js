@@ -10,9 +10,9 @@ class RobotComponent extends React.Component {
   }
 
   handleChange(event) {
-    const upperCaseInstruction = event.target.value.toUpperCase()
+    const upperCaseInstruction = event.target.value.toUpperCase();
     this.setState({ instruction:  upperCaseInstruction});
-    this.setState({result: this.state.robot.execute(upperCaseInstruction)})
+    this.setState({result: this.state.robot.execute(upperCaseInstruction)});
   }
 
   render() {

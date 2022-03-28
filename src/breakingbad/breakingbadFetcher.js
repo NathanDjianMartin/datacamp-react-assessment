@@ -7,7 +7,7 @@ const axios = require('axios')
  * @returns 
  */
 async function getEpisodes(characters) {
-    let result = []
+    let result = [];
     await axios
         .get('https://breakingbadapi.com/api/episodes')
         .then(res => {
@@ -22,8 +22,8 @@ async function getEpisodes(characters) {
         })
         .catch(error => {
             console.error(error)
-        })
-    return result
+        });
+    return result;
 }
 
 /**
@@ -34,10 +34,10 @@ async function getEpisodes(characters) {
  */
 function arrayContainsCharacters(array, characters) {
     if (typeof characters == "string") { // we have a single string
-        return array.includes(characters)
+        return array.includes(characters);
     } else if (Array.isArray(characters)) { // we have an array of strings
         return characters.every(value => {
-            return array.includes(value)
+            return array.includes(value);
         })
     }
 }
@@ -50,13 +50,13 @@ function arrayContainsCharacters(array, characters) {
  * @param {number} n a number between 0 and 99
  */
 function getTwoDigitsNumber(n) {
-    const stringNumber = String(n).trim()
+    const stringNumber = String(n).trim();
     if (stringNumber.length === 1) {
-        return "0" + stringNumber
+        return "0" + stringNumber;
     } else if (stringNumber.length === 2) {
-        return stringNumber
+        return stringNumber;
     } else {
-        throw new Error(`The given number ${n} is not between 0 and 99.`)
+        throw new Error(`The given number ${n} is not between 0 and 99.`);
     }
 }
 
