@@ -7,7 +7,6 @@ const axios = require('axios')
  * @returns 
  */
 async function getEpisodes(characters) {
-    console.log(characters);
     let result = []
     await axios
         .get('https://breakingbadapi.com/api/episodes')

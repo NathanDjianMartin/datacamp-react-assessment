@@ -12,7 +12,7 @@ class Robot {
      * @param {string} instruction 
      */
     execute(instruction) {
-        if (this.#isValid(instruction) === false) { // I use explicit booleans test for reading purposes
+        if (Robot.isValid(instruction) === false) { // I use explicit booleans test for reading purposes
             return `The instruction "${instruction}" is not valid.`;
         }
 
@@ -120,7 +120,7 @@ class Robot {
      * 
      * @param {string} instruction 
      */
-    #isValid(instruction) {
+    static isValid(instruction) {
         const regex = /^\d+ \d+ (NORTH|SOUTH|EAST|WEST) [R|L|A]*$/;
         return regex.test(instruction);
     }
